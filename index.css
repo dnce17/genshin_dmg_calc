@@ -1,0 +1,61 @@
+html {
+    background-image: url("img/bg.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 750px;
+}
+
+
+label {
+    /* border: 5px solid red; */
+    display: inline-block;
+    width: 130px;
+    margin: 5px;
+}
+
+input {
+    /* border: 5px solid red; */
+    width: 70px;
+    border-radius: 5px;
+    border: 1px solid silver;
+    text-align: center;
+}
+
+.char-ctnr {
+    /* border: 5px solid red; */
+    width: max-content;
+    background-color:rgba(0,0,0,0.7);
+    border-radius: 5px;
+    box-shadow: 0 0 15px 5px black;
+    /* float: left; */
+}
+
+.form-ctnr {
+    /* border: 5px solid red; */
+    width: max-content;
+    margin: auto;
+}
+
+.img-ctnr {
+    text-align: center;
+}
+
+.char-icon {
+    width: 60%;
+}
+
+.btn-ctnr {
+    margin-top: 20px;
+}
+
+.char-ctnr, .dmg-ctnr {
+    color: white;
+}
+
+.enemy-ctnr {
+
+}
+
+/* resouces used */
+/* https://css-tricks.com/almanac/properties/b/box-shadow/ */
+/* https://www.hongkiat.com/blog/css-margin-auto/ */
