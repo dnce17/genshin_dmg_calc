@@ -7,13 +7,13 @@
 </head>
 
 <body>
-    <div class="char-ctnr">
+    <div class="char-ctnr main-ctnr-attr">
 
         <div class="img-ctnr">
             <img class="char-icon" src="img/nilou.png">
         </div>
 
-        <div class="form-ctnr">
+        <div class="form-ctnr sub-ctnr-attr">
             <form id="form">
                 <label for="lv">LV:</label>
                 <input type="number" id="lv" name="lv"><br>
@@ -35,17 +35,32 @@
                 <input type="number" id="elementbonus" name="elementbonus"><br>
                 <label for="talentdmg">Talent DMG%:</label>
                 <input type="number" id="talentdmg" name="talentdmg"><br>
+            </form>
+        </div>
+    </div>
+
+    <!-- maybe a different class name for traits shared among different containers -->
+
+    <div class="second-column-ctnr">
+        <div class="enemy-ctnr main-ctnr-attr">
+            <div class="img-ctnr">
+                <img class="enemy-icon" src="img/ruin_guard.png">
+            </div>
+
+            <div class="sub-ctnr-attr">
                 <label for="enemylv">Enemy LV:</label>
                 <input type="text" id="enemylv" name="enemylv"><br>
                 <label for="resistance">Enemy Resistance:</label>
                 <input type="text" id="resistance" name="resistance"><br>
-            </form>
+            </div>
+        </div>
 
+        <div class="dmg-calc-ctnr main-ctnr-attr">
             <div class="btn-ctnr">
                 <button class="calculatebtn">Calculate</button>
             </div>
 
-            <div class="dmg-ctnr">
+            <div class="dmg-ctnr sub-ctnr-attr">
                 <label for="totaldmg">Total DMG:</label>
                 <input type="text" id="totaldmg" name="totaldmg"><br>
             </div>

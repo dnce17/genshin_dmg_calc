@@ -5,6 +5,9 @@ html {
     min-height: 750px;
 }
 
+body {
+    color: white;
+}
 
 label {
     /* border: 5px solid red; */
@@ -21,39 +24,44 @@ input {
     text-align: center;
 }
 
-.char-ctnr {
+.main-ctnr-attr {
     /* border: 5px solid red; */
     width: max-content;
     background-color:rgba(0,0,0,0.7);
     border-radius: 5px;
     box-shadow: 0 0 15px 5px black;
-    /* float: left; */
 }
 
-.form-ctnr {
+.sub-ctnr-attr {
     /* border: 5px solid red; */
     width: max-content;
     margin: auto;
+}
+
+.dmg-calc-ctnr {
+    width: 100%;
+}
+
+.second-column-ctnr {
+    margin-left: 20px;
+}
+
+.char-ctnr, .second-column-ctnr {
+    float: left;
 }
 
 .img-ctnr {
     text-align: center;
 }
 
-.char-icon {
-    width: 60%;
-}
-
 .btn-ctnr {
+    padding: 5px;
     margin-top: 20px;
+    margin-left: 20px;
 }
 
-.char-ctnr, .dmg-ctnr {
-    color: white;
-}
-
-.enemy-ctnr {
-
+.char-icon, .enemy-icon {
+    width: 60%;
 }
 
 /* resouces used */
