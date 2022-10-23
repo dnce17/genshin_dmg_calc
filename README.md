@@ -1,1 +1,1 @@
-# genshin_raw_dmg_calc
+# genshin_dmg_calc
