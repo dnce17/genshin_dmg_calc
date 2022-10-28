@@ -18,7 +18,7 @@ label {
 
 input {
     /* border: 5px solid red; */
-    width: 70px;
+    width: 80px;
     border-radius: 5px;
     border: 1px solid silver;
     text-align: center;
@@ -51,7 +51,15 @@ input {
 }
 
 .img-ctnr {
+    /* border: 5px solid red; */
     text-align: center;
+}
+
+#char-icon-list { 
+    position: absolute;
+    left: 0;
+    margin-top: 7px;
+    margin-left: 7px;
 }
 
 .btn-ctnr {
@@ -64,6 +72,19 @@ input {
     width: 60%;
 }
 
+.center {
+    /* border: 5px solid red; */
+    width: max-content;
+    display: flex; /*so height is the same as tallest content */
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
 /* resouces used */
 /* https://css-tricks.com/almanac/properties/b/box-shadow/ */
 /* https://www.hongkiat.com/blog/css-margin-auto/ */
+/* https://stackoverflow.com/questions/19026884/flexbox-center-horizontally-and-vertically */
+/* http://web.simmons.edu/~grabiner/comm244/weekfour/document-tree.html#:~:text=Ancestor,other%20elements%20on%20the%20page.
+https://www.w3schools.com/cssref/pr_pos_left.php */
+/* https://www.w3schools.com/css/css_positioning.asp#:~:text=An%20element%20with%20position%3A%20absolute,moves%20along%20with%20page%20scrolling. */
