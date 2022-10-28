@@ -62,11 +62,15 @@ input {
     margin-left: 7px;
 }
 
-.btn-ctnr {
+/* .btn-ctnr {
     padding: 5px;
     margin-top: 20px;
     margin-left: 20px;
-}
+} */
+
+/* .saved-ctnr {
+    border: 5px solid red;
+} */
 
 .char-icon, .enemy-icon {
     width: 60%;

@@ -36,6 +36,7 @@ for (let key of keys) {
 calculateBtn.addEventListener('click', Calculate);
 saveBtn.addEventListener('click', Save);
 loadBtn.addEventListener('click', Load);
+deleteBtn.addEventListener("click", deleteItem);
 
 function Calculate() {
     let atkTalent = +atk.value * +talentDmg.value/100
@@ -83,8 +84,41 @@ function checkDup(saveAs, option) {
 }
 
 function Load() {
-    console.log(charIcon.src);
-    charIcon.src = "img/ruin_guard.png"
+    let key = saved.value;
+    let records = window.localStorage.getItem(key);
+
+    // Load the saved data
+    charIcon.src = JSON.parse(records).charIcon;
+    charLv.value = JSON.parse(records).level;
+    atk.value = JSON.parse(records).atk;
+    em.value = JSON.parse(records).em;
+    critRate.value = JSON.parse(records).critRate;
+    critDmg.value = JSON.parse(records).critDmg;
+    er.value = JSON.parse(records).er;
+    elementBonus.value = JSON.parse(records).elementBonus;
+    talentDmg.value = JSON.parse(records).talentDmg;
+}
+
+function deleteItem() {
+    let key = saved.value;
+    localStorage.removeItem(key);
+
+    // remove the deleted item from saved input box 
+    let alreadyExist = [];
+    for (i = 0; i < saved.length; i++) {
+        let savedName = saved[i].value;
+        alreadyExist.push(savedName);
+    }
+
+    if (alreadyExist.includes(key)) {
+        for (i = 0; i < saved.length; i++) {
+            let savedName = saved[i].value;
+            if (key == savedName) {
+                saved.remove(i);
+                alert("File has been deleted");
+            } 
+        }
+    }
 }
 
 
