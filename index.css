@@ -62,19 +62,28 @@ input {
     margin-left: 7px;
 }
 
-/* .btn-ctnr {
+.calculate-btn-ctnr {
+    /* border: 5px solid red; */
     padding: 5px;
     margin-top: 20px;
-    margin-left: 20px;
-} */
+    margin-left: 10px;
+}
 
-/* .saved-ctnr {
-    border: 5px solid red;
-} */
+.saved-ctnr {
+    margin-top: 10px;
+}
+
+.save, .load, .delete {
+    margin-top: 5px;
+}
 
 .char-icon, .enemy-icon {
     width: 60%;
 }
+
+/* .delete {
+    margin-left: 10px;
+} */
 
 .center {
     /* border: 5px solid red; */
