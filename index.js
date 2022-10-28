@@ -1,4 +1,5 @@
 // character traits
+let charIcon = document.querySelector(".char-icon");
 let charLv = document.querySelector("#lv");
 let atk = document.querySelector("#atk");
 let em = document.querySelector("#em");
@@ -7,6 +8,8 @@ let critDmg = document.querySelector("#critdmg");
 let er = document.querySelector("#er");
 let elementBonus = document.querySelector("#elementbonus");
 let talentDmg = document.querySelector("#talentdmg");
+
+let saved = document.querySelector("#saved");
 
 //enemy traits
 let enemyLv = document.querySelector("#enemylv");
@@ -32,6 +35,7 @@ for (let key of keys) {
 // Functions
 calculateBtn.addEventListener('click', Calculate);
 saveBtn.addEventListener('click', Save);
+loadBtn.addEventListener('click', Load);
 
 function Calculate() {
     let atkTalent = +atk.value * +talentDmg.value/100
@@ -44,6 +48,7 @@ function Calculate() {
 
 function Save() {
     const char = {
+        charIcon: charIcon.src,
         level: charLv.value,
         atk: atk.value,
         em: em.value,
@@ -75,6 +80,11 @@ function checkDup(saveAs, option) {
         saved.add(option);
         alert("Save Successful!");
     }
+}
+
+function Load() {
+    console.log(charIcon.src);
+    charIcon.src = "img/ruin_guard.png"
 }
 
 
