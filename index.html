@@ -4,6 +4,7 @@
 <head>
     <title>Genshin Raw DMG Calc</title>
     <link rel="stylesheet" type="text/css" href="index.css" />
+    <script src="module1.js"></script>
 </head>
 
 <body>
@@ -12,7 +13,7 @@
 
             <div class="img-ctnr">
                 <img class="char-icon" src="img/kaeya.png">
-                <select name="char-icon-list" id="char-icon-list">
+                <select name="char-icon-list" id="char-icon-list" onchange="changeIcon(this)">
                     <option>Kaeya</option>
                     <option>Nilou</option>
                  </select>

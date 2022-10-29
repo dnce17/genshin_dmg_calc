@@ -121,6 +121,21 @@ function deleteItem() {
     }
 }
 
+function changeIcon(item) {
+    // charIcon.src = "img/nilou.png"
+    // console.log(item.value);
+    // let test = "nilou"
+    for (key in char) {
+        // console.log(char[key].imgSrc);
+        let charName = item.value;
+        // console.log(charName, key)
+        if (charName == key) {
+            // console.log(charName, key);
+            charIcon.src = char[key].imgSrc;
+        }
+    }
+}
+
 
 // Notes: Helped to debug
 // console.log(+atk.value + 2);
