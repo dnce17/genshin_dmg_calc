@@ -14,6 +14,7 @@ let saved = document.querySelector("#saved");
 //enemy traits
 let enemyLv = document.querySelector("#enemylv");
 let resistance = document.querySelector("#resistance");
+let enemyIcon = document.querySelector(".enemy-icon");
 
 // total dmg
 let totalDmg = document.querySelector("#totaldmg");
@@ -61,11 +62,12 @@ function Save() {
     }
 
     let saveAs = prompt("Save As:");
-    window.localStorage.setItem(saveAs, JSON.stringify(char));
-    let option = document.createElement("option");
-    option.text = saveAs;
-
-    checkDup(option.value, option)
+    if (saveAs != null) {
+        window.localStorage.setItem(saveAs, JSON.stringify(char));
+        let option = document.createElement("option");
+        option.text = saveAs;
+        checkDup(option.value, option)
+    }
 }
 
 function checkDup(saveAs, option) {
@@ -97,6 +99,10 @@ function Load() {
     er.value = JSON.parse(records).er;
     elementBonus.value = JSON.parse(records).elementBonus;
     talentDmg.value = JSON.parse(records).talentDmg;
+
+    // Change name in input box under char icon to match loaded char
+    let charIconList = document.querySelector("#char-icon-list");
+    charIconList.value = key;
 }
 
 function deleteItem() {
@@ -121,21 +127,23 @@ function deleteItem() {
     }
 }
 
-function changeIcon(item) {
-    // charIcon.src = "img/nilou.png"
-    // console.log(item.value);
-    // let test = "nilou"
+function changeCharIcon(item) {
     for (key in char) {
-        // console.log(char[key].imgSrc);
         let charName = item.value;
-        // console.log(charName, key)
         if (charName == key) {
-            // console.log(charName, key);
             charIcon.src = char[key].imgSrc;
         }
     }
 }
 
+function changeEnemyIcon(item) {
+    for (key in enemies) {
+        let enemyName = item.value;
+        if (enemyName.replace(/\s/g, '') == key) {
+            enemyIcon.src = enemies[key].imgSrc;
+        }
+    }
+}
 
 // Notes: Helped to debug
 // console.log(+atk.value + 2);
