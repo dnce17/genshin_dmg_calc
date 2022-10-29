@@ -18,13 +18,13 @@
                     <option>Nilou</option>
                     <option>Ei</option>
                     <option>Collei</option>
-                 </select>
+                </select>
             </div>
 
             <div class="form-ctnr sub-ctnr-attr">
                 <div id="form">
                     <label for="lv">LV:</label>
-                    <input type="number" id="lv" name="lv"><br>
+                    <input type="number" id="lv" name="lv" value="80"><br>
                     <label for="atk">ATK:</label>
                     <input type="number" id="atk" name="atk" placeholder="HP, Def..."><br>
                     <label for="em">EM:</label>
@@ -42,9 +42,9 @@
                     <button type="submit" class="save">Save</button>
                 </div>
 
-                <div class="saved-ctnr"> 
+                <div class="saved-ctnr">
                     <select name="saved" id="saved">
-                       <!-- <option>Placeholder</option> -->
+                        <!-- <option>Placeholder</option> -->
                     </select>
 
                     <div class="btn-ctnr">
@@ -62,14 +62,14 @@
                     <select name="enemy-icon-list" id="enemy-icon-list" onchange="changeEnemyIcon(this)">
                         <option>Ruin Guard</option>
                         <option>Cryo Abyss Mage</option>
-                     </select>
+                    </select>
                 </div>
 
                 <div class="sub-ctnr-attr">
                     <label for="enemylv">Enemy LV:</label>
-                    <input type="text" id="enemylv" name="enemylv"><br>
+                    <input type="text" id="enemylv" name="enemylv" value="93"><br>
                     <label for="resistance">Enemy Resistance:</label>
-                    <input type="text" id="resistance" name="resistance"><br>
+                    <input type="text" id="resistance" name="resistance" value="10"><br>
                 </div>
             </div>
 
@@ -82,6 +82,49 @@
                     <label for="totaldmg">Total DMG:</label>
                     <input type="text" id="totaldmg" name="totaldmg"><br>
                 </div>
+            </div>
+        </div>
+
+        <div class="third-column-ctnr">
+            <div class="resist-ctnr main-ctnr-attr">
+                <table class="resist-table">
+                    <tr>
+                        <th colspan="2">Resistances (%)</th>
+                    </tr>
+                    <tr>
+                        <td><img src="img/element/physical.png"></td>
+                        <td class="resist-lv physical-resist">70</td>
+                    </tr>
+                    <tr>
+                        <td><img src="img/element/pyro.png"></td>
+                        <td class="resist-lv pyro-resist">10</td>
+                    </tr>
+                    <tr>
+                        <td><img src="img/element/hydro.png"></td>
+                        <td class="resist-lv hydro-resist">10</td>
+                    </tr>
+                    <tr>
+                        <td><img src="img/element/electro.png"></td>
+                        <td class="resist-lv electro-resist">10</td>
+                    </tr>
+                    <tr>
+                        <td><img src="img/element/cryo.png"></td>
+                        <td class="resist-lv cryo-resist">10</td>
+                    </tr>
+                    <tr>
+                        <td><img src="img/element/dendro.png"></td>
+                        <td class="resist-lv dendro-resist">10</td>
+                    </tr>
+                    <tr>
+                        <td><img src="img/element/anemo.png"></td>
+                        <td class="resist-lv anemo-resist">10</td>
+                    </tr>
+                    <tr>
+                        <td><img src="img/element/geo.png"></td>
+                        <td class="resist-lv geo-resist">10</td>
+                    </tr>
+
+                </table>
             </div>
         </div>
     </div>

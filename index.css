@@ -24,6 +24,15 @@ input {
     text-align: center;
 }
 
+td img {
+    width: 30px;
+    margin: auto; /* this only worked after making img a block, so perhaps margin: auto & block go together */
+    display: block;
+}
+
+.resist-table {
+    padding: 10px;
+}
 
 .main-ctnr-attr {
     /* border: 5px solid red; */
@@ -43,7 +52,7 @@ input {
     width: 100%;
 }
 
-.second-column-ctnr {
+.second-column-ctnr, .third-column-ctnr {
     margin-left: 20px;
 }
 

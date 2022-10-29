@@ -149,12 +149,44 @@ function changeCharIcon(item) {
 }
 
 function changeEnemyIcon(item) {
+
+    let physical = document.querySelector(".physical-resist");
+    let pyro = document.querySelector(".pyro-resist");
+    let hydro = document.querySelector(".hydro-resist");
+    let electro = document.querySelector(".electro-resist");
+    let cryo = document.querySelector(".cryo-resist");
+    let dendro = document.querySelector(".dendro-resist");
+    let anemo = document.querySelector(".anemo-resist");
+    let geo = document.querySelector(".geo-resist");
+    // physical.textContent = "70"
+    // console.log(physical.textContent)
+
     for (key in enemies) {
         let enemyName = item.value;
         if (enemyName.replace(/\s/g, '') == key) {
             enemyIcon.src = enemies[key].imgSrc;
+
+            let resistValueList = [];
+            for (keyTwo in enemies[key].resistance) {
+                let resistValue = enemies[key].resistance[keyTwo];
+                resistValueList.push(resistValue);
+                // console.log(resistValueList);
+            }
+
+            physical.textContent = resistValueList[0]
+            pyro.textContent = resistValueList[1]
+            hydro.textContent = resistValueList[2]
+            electro.textContent = resistValueList[3]
+            cryo.textContent = resistValueList[4]
+            dendro.textContent = resistValueList[5]
+            anemo.textContent = resistValueList[6]
+            geo.textContent = resistValueList[7]
         }
+
+        
     }
+    
+    
 }
 
 // Notes: Helped to debug
