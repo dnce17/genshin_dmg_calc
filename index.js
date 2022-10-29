@@ -102,7 +102,19 @@ function Load() {
 
     // Change name in input box under char icon to match loaded char
     let charIconList = document.querySelector("#char-icon-list");
-    charIconList.value = key;
+    let imgLink = JSON.parse(records).charIcon;
+    let imgPng = imgLink.substring(imgLink.lastIndexOf("/") + 1);
+    for (key in char) {
+        let moduleImgLink = char[key].imgSrc;
+        let moduleImgPng = moduleImgLink.substring(moduleImgLink.lastIndexOf("/") + 1);
+        if (imgPng == moduleImgPng) {
+            charIconList.value = char[key].name;
+        }
+    }
+
+    // Testing purpose for above comment
+    // let str = charIcon.src;
+    // console.log(str.substring(str.lastIndexOf("/") + 1)) // return (char name).png
 }
 
 function deleteItem() {
@@ -153,3 +165,7 @@ function changeEnemyIcon(item) {
 // console.log(resist)
 // console.log(lvDiff)
 // Note: + turns string to #
+
+// Resources Used
+// https://bobbyhadz.com/blog/javascript-get-substring-after-specific-character#:~:text=To%20get%20the%20substring%20after,string%20after%20the%20specified%20character.
+// https://www.w3schools.com/jsref/jsref_lastindexof.asp

@@ -1,11 +1,22 @@
 let char = {
 
     Kaeya: {
+        name: "Kaeya",
         imgSrc: "img/kaeya.png"
     },
 
     Nilou: {
+        name: "Nilou",
         imgSrc: "img/nilou.png"
+    },
+
+    Ei: {
+        name: "Ei",
+        imgSrc: "img/ei.png"
+    },
+
+    Collei: {
+        imgSrc: "img/collei.png"
     }
 }
 
